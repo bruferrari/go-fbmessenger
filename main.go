@@ -12,7 +12,7 @@ import (
 func macaronSetUp() {
 	m := macaron.Classic()
 
-	m.Get("/", func() (int, string) {
+	m.Get("/", func(ctx *macaron.Context) (int, string) {
 		url := ctx.Req.URL
 		params := url.Query()
 
@@ -26,6 +26,7 @@ func macaronSetUp() {
 			}
 			return http.StatusOK, params["hub.challenge"][0]
 		}
+		return http.StatusBadRequest, "Bad request"
 	})
 
 	m.Run()
