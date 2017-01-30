@@ -12,7 +12,7 @@ import (
 func macaronSetUp() {
 	m := macaron.Classic()
 
-	m.Get("/", func(ctx *macaron.Context) {
+	m.Get("/", func() (int, string) {
 		url := ctx.Req.URL
 		params := url.Query()
 
@@ -21,9 +21,10 @@ func macaronSetUp() {
 
 		if params["hub.mode"][0] == "subscribe" {
 			if params["hub.verify_token"][0] != os.Getenv("VERIFY_TOKEN") {
-				ctx.JSON(403, "Verification token mismatch")
+				log.Println("403", "Verification token mismatch")
+				return 403, "Verification token mismatch"
 			}
-			ctx.JSON(http.StatusOK, params["hub.challenge"][0])
+			return http.StatusOK, params["hub.challenge"][0]
 		}
 	})
 
