@@ -1,0 +1,39 @@
+{
+	"ImportPath": "github.com/bruferrari/go-fbmessenger",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v74",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/Unknwon/com",
+			"Comment": "v1",
+			"Rev": "28b053d5a2923b87ce8c5a08f3af779894a72758"
+		},
+		{
+			"ImportPath": "github.com/davecgh/go-spew/spew",
+			"Comment": "v1.1.0",
+			"Rev": "346938d642f2ec3594ed81d874461961cd0faa76"
+		},
+		{
+			"ImportPath": "github.com/go-macaron/inject",
+			"Rev": "d8a0b8677191f4380287cfebd08e462217bac7ad"
+		},
+		{
+			"ImportPath": "github.com/novatrixtech/go-fbmessenger/fbmodelsend",
+			"Comment": "v-0.1-6-gf77c3e7",
+			"Rev": "f77c3e7d9a6f595497488aad60670715c8da83d5"
+		},
+		{
+			"ImportPath": "gopkg.in/ini.v1",
+			"Comment": "v1.21.1",
+			"Rev": "6e4869b434bd001f6983749881c7ead3545887d8"
+		},
+		{
+			"ImportPath": "gopkg.in/macaron.v1",
+			"Comment": "v1.1.8",
+			"Rev": "4974334b10dbb6f5c0e17f4c10555ff050a16329"
+		}
+	]
+}
