@@ -7,7 +7,7 @@ func macaronSetUp() {
 	m := macaron.Classic()
 
 	m.Get("/", func() string {
-		return "Hello world!"
+		return "1951683431"
 	})
 
 	m.Run()
