@@ -21,9 +21,9 @@ func macaronSetUp() {
 
 		if params["hub.mode"][0] == "subscribe" {
 			if params["hub.verify_token"][0] != os.Getenv("VERIFY_TOKEN") {
-				ctx.HTML(403, "Verification token mismatch")
+				ctx.JSONString(403, "Verification token mismatch")
 			}
-			ctx.HTML(http.StatusOK, params["hub.challenge"][0])
+			ctx.JSONString(http.StatusOK, params["hub.challenge"][0])
 		}
 	})
 
